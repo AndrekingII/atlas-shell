@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "##\n# User Database\n#\n$(cat /etc/passwd)\n##\n# Host Database\n#\n$(cat /etc/hosts)"
+{ echo "##"; echo "# User Database"; echo "#"; cat /etc/passwd; echo "##"; echo "# Host Database"; echo "#"; cat /etc/hosts; } > temp.txt; cat temp.txt
