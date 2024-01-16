@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Set the path to the /etc/passwd file
+file="/etc/passwd"
+
+# Read all 7 fields into 7 variables using IFS
+while IFS=: read -r user _ uid gid _ home shell; do
+    # Only display if UID is greater than or equal to 500
+    if [ "$uid" -ge 500 ]; then
+        echo "The user $user is part of the gang with GROUP ID $gid."
+        echo "They live in the directory $home and ride the mighty $shell."
+        echo "USER ID's place is protected by the passcode PASSWORD."
+        echo "For more info about $user, check USER ID INFO."
+        echo
+    fi
+done < "$file"
