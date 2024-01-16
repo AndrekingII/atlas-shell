@@ -3,7 +3,7 @@
 hour=0
 minute=1
 
-while [ $hour -le 12 ]; do
+while [ $hour -le 5 ]; do
     # Display the current time
     printf "%02d:%02d\n" $hour $minute
 
