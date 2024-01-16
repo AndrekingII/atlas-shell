@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#apache
+# Assuming the Apache log file is named "apache-access.log"
+LOG_FILE="apache-access.log"
+
+# Use awk to extract IP and HTTP status code
+awk -F' ' '{print $1, $9}' "$LOG_FILE"
