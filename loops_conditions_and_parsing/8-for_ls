@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script lists files in the current directory, displaying only the part of the name after the first dash.
+
+for entry in *; do
+    # Check if the entry is a regular file (not a directory or hidden file)
+    if [[ -f "$entry" ]]; then
+        # Extract the part of the name after the first dash
+        name_after_dash="${entry#*-}"
+        echo "- $name_after_dash"
+    fi
+done
