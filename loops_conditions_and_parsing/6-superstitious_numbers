@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# while and case
+# if and case
 count=1
 while [ $count -le 20 ]; do
     case $count in
