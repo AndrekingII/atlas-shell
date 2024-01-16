@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # will print while less than 11
-counter=0
-while [ $counter -lt 11 ]
+counter=1
+while [ $counter -le 11 ]
 do
 echo "Best School"
 i=$((counterr + 1))
