@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 # elif is for multi if's
 count=1
 while [ $count -le 10 ]; do
