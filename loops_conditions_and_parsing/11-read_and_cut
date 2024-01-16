@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#read and cut
+# Set the path to the /etc/passwd file
+file="/etc/passwd"
+
+# Read all 7 fields into 7 variables
+while IFS=: read -r user _ uid gid _ home _; do
+    # Only display if UID is greater than or equal to 500
+    if [ "$uid" -ge 500 ]; then
+        echo "User: $user"
+        echo "User ID: $uid"
+        echo "Home Directory: $home"
+        echo
+    fi
+done < "$file"
